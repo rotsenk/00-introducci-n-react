@@ -21,3 +21,7 @@ Ternarios
 Async - Await
 
 Mi objetivo aquí es que tengamos las bases que nos ayuden a que podamos diferenciar fácilmente qué es propio de React y qué es propio de JavaScript. Estos conceptos y ejercicios nos ayudarán a suavizar la curva de aprendizaje de React.
+
+## Create React App 
+- https://create-react-app.dev/
+Este nos facilita mucho, similar a vite, manejo de módulos etc
