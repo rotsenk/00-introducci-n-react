@@ -5,7 +5,7 @@
 
 - Exposiciones sobre los componentes, explicar la estructura de la arquitecura con VITE
 
-- Creación de componentes (Functional Components)
+- Creación de componentes (Functional Components: Componente basado en una función, función de flecha)
 
 - Propiedades - Props
 
