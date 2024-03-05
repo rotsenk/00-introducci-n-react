@@ -64,3 +64,4 @@ ReactDOM.createRoot( document.getElementById('root')).render(
     </React.StrictMode>
 );
 ```
+> Tarea, crear un componente personalizado que muestre nuestro nombre
