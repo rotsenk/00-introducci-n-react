@@ -3,12 +3,11 @@ const getResult = () => {
   return "Nestor Rivas";
 } 
 
-
-export const FirstApp = () => {
+export const FirstApp = ({ title, subTitle }) => {
   return (
     <>
-      <h1>{ getResult() }</h1>
-      <p>Soy un Ingeniero en Sistemas Informáticos</p>
+      <h1>{ title }</h1>
+      <p>{ subTitle }</p>
     </>
   );
 }
