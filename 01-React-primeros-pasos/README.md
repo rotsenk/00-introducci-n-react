@@ -15,6 +15,8 @@
 
 - DefaultProps
 
+- Tarea: https://gist.github.com/Klerith/e1a731cc595c00a9794a709062eae757
+
 - Introducción general a los Hooks
 
 - useState
