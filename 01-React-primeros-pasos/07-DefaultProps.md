@@ -1,3 +1,8 @@
+## Si queremos pasarle properties por default
+Ventaja de los propTypes, es que nos indican cuando estamos pasando un valor diferente del que se solicita
+
+podríamos hacer esto:
+```js
 import PropTypes from 'prop-types';
 
 const getResult = () => {
@@ -26,3 +31,19 @@ FirstApp.defaultProps = {
   subTitle: 'No hay subtitle',
   name: 'Nestor Rivas'
 }
+```
+
+en el `main.jsx`:
+```js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { FirstApp } from './FirstApp';
+import './styles.css';
+
+
+ReactDOM.createRoot( document.getElementById('root')).render(
+    <React.StrictMode>
+        <FirstApp title="Hola soy el títle" />
+    </React.StrictMode>
+);
+```
