@@ -7,15 +7,17 @@
 
 - Creación de componentes (Functional Components: Componente basado en una función, función de flecha)
 
-- Propiedades - Props
-
 - Impresiones en el HTML
+
+- Propiedades - Props
 
 - PropTypes
 
 - DefaultProps
 
 - Tarea: https://gist.github.com/Klerith/e1a731cc595c00a9794a709062eae757
+
+- Evento Click (eventos en general): https://es.legacy.reactjs.org/docs/events.html
 
 - Introducción general a los Hooks
 
