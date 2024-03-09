@@ -1,3 +1,9 @@
+## En esta sección realizaremos ejemplos con handleSubstract y handleReset
+Crearemos dos botones más `<button>-1</button> <button>reset</button>` en `CounterApp.jsx` , y modificaremos el diseño en `styles.css` las propiedades de `button` colocando: `margin-right: 5px;` 
+
+- La tarea es: cuando presionemos el botón de +1, que incremente, cuando sea el -1 que decremente y cuando sea el de reset, que se resetee al valor original que el componente padre le envía por default.
+
+```js
 import { useState } from 'react';//use significa que es un Hook, es una regla
 import React from "react";
 import PropTypes from "prop-types";
@@ -34,3 +40,4 @@ export const CounterApp = ({ value }) => {
 CounterApp.propTypes = {
   value: PropTypes.number.isRequired,
 };
+```
