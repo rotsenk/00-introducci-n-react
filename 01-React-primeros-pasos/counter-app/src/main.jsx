@@ -8,7 +8,7 @@ import { CounterApp } from './CounterApp';
 
 ReactDOM.createRoot( document.getElementById('root')).render(
     <React.StrictMode>
-        <CounterApp value={ 1011 } />
+        <CounterApp value={ 20 } />
     </React.StrictMode>
 );
 
