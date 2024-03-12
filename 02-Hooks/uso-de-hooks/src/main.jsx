@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import EstadoRed from "./RedState";
+import App from './App';
 
 
 ReactDOM.createRoot( document.getElementById('root')).render(
     <React.StrictMode>
-        <EstadoRed />
+        <App />
     </React.StrictMode>
 );

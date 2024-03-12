@@ -129,7 +129,7 @@ function useNetworkStatus() {
     };
   }, []);
 
-  return isOnline;
+  return [isOnline, setIsOnline];
 ```
 - Cuando ocurren estos eventos, se ejecutan las funciones `handleOnline` y `handleOffline`, respectivamente.
 - Finalmente, el *Custom Hook* devuelve el valor actual de `isOnline`.
@@ -201,3 +201,8 @@ function EstadoRed() {
 export default EstadoRed;
 ```
 `prevIsOnline` es un parámetro que se utiliza en la función de actualización del estado en React. En el contexto de tu componente `EstadoRed`, `prevIsOnline` representa el valor actual del estado `isOnline`.
+
+- Código completo:
+```js
+
+```

@@ -22,7 +22,7 @@ function useNetworkStatus() {
     };
   }, []);
 
-  return isOnline;
+  return [isOnline, setIsOnline];
 }
 
 function EstadoRed() {
