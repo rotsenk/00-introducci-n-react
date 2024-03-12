@@ -1,4 +1,4 @@
-import NoControlado from './components/NoControlado';
+import NoControlado from "./Components/NoControlado";
 
 const App = () => {
   return (
