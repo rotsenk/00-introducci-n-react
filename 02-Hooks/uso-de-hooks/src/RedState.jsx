@@ -26,7 +26,7 @@ function useNetworkStatus() {
 }
 
 function EstadoRed() {
-  const [isOnline, setIsOnline] = useState(true); // Agrega esta línea
+  const [isOnline, setIsOnline] = useNetworkStatus(); // Agrega esta línea
 
   const handleDesconectar = () => {
     setIsOnline((prevIsOnline) => !prevIsOnline); // Cambia el estado al valor opuesto
