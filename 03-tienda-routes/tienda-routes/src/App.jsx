@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Route, Routes, Link, useParams } from 'react-router-dom';
+import { Route, Routes, Link, useParams, Outlet } from 'react-router-dom';
 
 const Home = () => <h1>Home</h1>
 
@@ -26,17 +26,29 @@ const SearchPage = () => {
   )
 };
 
-//Modificando Series para extrar con useParams
 const Series = () => {
-  const { nameSerie } = useParams();//obtenemos las keys del segmento dinámico del path, tiene que llamarse exactamente de donde se extrae
+  const { nameSerie } = useParams();
   
+  //creamos el Link...
   return (
     <div>
       <h1>Series</h1>
       {nameSerie}
+      <Link to='details'>Ir a los detalles</Link>
+      <Outlet />
     </div>
   )
 }
+
+//creando el componente para detalles de la serie
+const SerieDetails = () => {
+  const { serie } = useParams();
+
+  return(
+    <h1>Detalle de la serie {serie}</h1>
+  )
+}
+
 
 function App() {
   return (
@@ -53,7 +65,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/search-page' element={<SearchPage />} />
-        <Route path='/series/:nameSerie' element={<Series />} />
+        <Route path='/series/:nameSerie' element={<Series />}>
+          <Route path='details' element={<SerieDetails />} />
+        </Route>
+        <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </div>
   )
