@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Route, Routes, Link, useParams, Outlet } from 'react-router-dom';
+import { Route, Routes, Link, useParams, Outlet, NavLink as NL } from 'react-router-dom';
 
 const Home = () => <h1>Home</h1>
 
@@ -34,7 +34,7 @@ const Series = () => {
     <div>
       <h1>Series</h1>
       {nameSerie}
-      <Link to='details'>Ir a los detalles</Link>
+      <Link to='details'> Ir a los detalles</Link>
       <Outlet />
     </div>
   )
@@ -49,6 +49,20 @@ const SerieDetails = () => {
   )
 }
 
+//Componente NavLink
+const NavLink = ({to, children, ...props}) => {
+  return(
+    <NL
+    {...props}
+      className={({isActive}) => { 
+        return isActive ? 'is-active' : undefined
+      }} 
+      to={to}
+      > {children}
+      </NL>
+  )
+}
+
 
 function App() {
   return (
@@ -57,8 +71,8 @@ function App() {
         <h1>Hola desde App</h1>
         <nav>
           <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/search-page'>Search Page</Link></li>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/search-page'>Search Page</NavLink></li>
           </ul>
         </nav>
       </header>

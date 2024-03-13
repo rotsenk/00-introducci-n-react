@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -11,3 +12,25 @@ header {
   padding: 10px;
   background-color: hotpink;
 }
+
+
+nav ul{
+  list-style-type: none;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 10px;
+}
+
+nav a.is-active{
+  font-weight: bold;
+  pointer-events: none;
+  background-color: rgb(133, 46, 60);
+  color: pink;
+}
+
