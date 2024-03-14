@@ -1,0 +1,41 @@
+body {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 10px;
+  display: flex;
+  place-items: center;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+#compA, #compB, #compC, #compD, #compE{
+  margin-left: 20px;
+  padding: 10px;
+}
+
+#compA{
+  background-color: blue;
+}
+
+#compB{
+  background-color: rgb(0, 255, 38);
+}
+
+#compC{
+  background-color: rgb(255, 0, 208);
+}
+
+#compD{
+  background-color: rgb(255, 166, 0);
+}
+
+#compE{
+  background-color: rgb(73, 44, 128);
+}
