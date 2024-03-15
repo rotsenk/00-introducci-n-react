@@ -1,12 +1,16 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route, Link, useParams, Outlet, NavLink as NL } from "react-router-dom";
+import { Button } from "./Button";
+import { StyledLink, DetailsContainer } from "./StyledLink";
+
 
 const Home = () => {
   return(
-    <div className="features">
+    <div  className="features">
       <h2>Bienvenido</h2>
       <p>Somos una tienda online de celulares.</p>
+      <Link to="/search-page"><Button>Ver Más</Button></Link>
     </div>
   )
 };
@@ -48,7 +52,7 @@ const SearchPage = () => {
       <ul>
         {celulares.map((celular) => (
           <li key={celular}>
-            <Link to={`/celulares/${celular}`}>{celular}</Link>
+            <StyledLink to={`/celulares/${celular}`}>{celular}</StyledLink>
           </li>
         ))}
       </ul>
@@ -64,7 +68,7 @@ const Celulares = () => {
     <div className="features" >
       <h2>Info de Celulares</h2>
       <h2>{ nameCelular }</h2>
-      <Link to='details'> <p>Ver detalles</p> </Link>
+      <StyledLink to='details'> Ver detalles </StyledLink>
       <Outlet />
     </div>
   );
@@ -76,12 +80,12 @@ const CelularDetails = () => {
   const detalles = dataCelu[nameCelular];//hacemos la referencia a la data
 
   return(
-    <div>
+    <DetailsContainer >
       <h3>Detalles del móvil { nameCelular } </h3>
       <h4>Modelo: {detalles.modelo} </h4>
       <h4>Precio: {detalles.precio} </h4>
       <h4>Descripción: {detalles.desc}</h4>
-    </div>
+    </DetailsContainer>
   )
 };
 
