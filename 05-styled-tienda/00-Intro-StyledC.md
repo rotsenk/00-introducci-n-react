@@ -1,0 +1,1 @@
+# Esta pequeña app será estilizada con Styled Components
